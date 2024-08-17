@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <link rel="stylesheet" href="{% static 'style-chat.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="iconBx">
+                <div class="user">
+                    <img src="{% static 'images/admin.jpg' %}" alt="admin">
+                </div>
+                <div class="icon">
+                    <a href="#">
+                        <i class="far fa-home-lg-alt"></i>
+                        <span>home</span>
+                    </a>
+                    <a href="#" class="active">
+                        <i class="fal fa-comment-dots"></i>
+                        <span>message</span>
+                    </a>
+                    <a href="#">
+                        <i class="fal fa-bell"></i>
+                        <span>alert</span>
+                    </a>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>settings</span>
+                    </a>
+                </div>
+            </div>
+            <div class="logOut">
+                <a href="#">
+                    <i class="fal fa-sign-out-alt"></i>
+                    <span>logout</span>
+                </a>
+            </div>
+        </div>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </section>
+</body>
+
+</html>

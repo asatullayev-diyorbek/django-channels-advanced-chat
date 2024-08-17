@@ -1,0 +1,86 @@
+{% extends 'user-list.html' %}
+{% load static %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block chat %}
+        <header>
+            <div class="imgBx">
+                <img src="{% static 'images/antMan.jpg' %}" alt="antMan">
+            </div>
+            <div class="title">
+                <h2>Ant Man</h2>
+                <p>online - last seen 10:53pm</p>
+            </div>
+            <div class="headIconBx">
+                <a href="#">
+                    <i class="far fa-phone-alt"></i>
+                </a>
+                <a href="#">
+                    <i class="far fa-video"></i>
+                </a>
+                <a href="{% url 'chatadvanced:user_list' %}">
+                    <i class="far fa-window-close"></i>
+                </a>
+            </div>
+        </header>
+        <div class="chatBx">
+            <div class="messages leftSide">
+                <h2>Hey there!</h2>
+                <p>today,08:30pm</p>
+            </div>
+            <div class="messages leftSide">
+                <h2>How are you?</h2>
+                <p>today,08:31pm</p>
+            </div>
+            <div class="messages rightSide">
+                <h2>Hello!</h2>
+                <p>today,09:01pm</p>
+            </div>
+            <div class="messages rightSide">
+                <h2>I am fine and how about you?</h2>
+                <p>today,09:02pm</p>
+            </div>
+            <div class="messages leftSide">
+                <h2>I am doing well. Can we meet tomorrow?</h2>
+                <p>today,09:22pm</p>
+            </div>
+            <div class="messages rightSide">
+                <h2>Yes, Sure!</h2>
+                <p>today,09:42pm</p>
+            </div>
+            <div class="messages leftSide">
+                <h2>Okk, bye</h2>
+                <p>today,09:44pm</p>
+            </div>
+            <div class="messages rightSide">
+                <h2>Okk, good luck!</h2>
+                <p>today,09:45pm</p>
+            </div>
+            <div class="messages leftSide">
+                <h2><img src="{% static 'images/chat.jpg' %}" alt="chat"></h2>
+            </div>
+            <div class="messages leftSide">
+                <h2>Good luck! Captain.</h2>
+                <p>today,09:45pm</p>
+            </div>
+        </div>
+        <div class="inputBx">
+            <div class="input">
+                <div class="search">
+                    <i class="far fa-paperclip"></i>
+                    <input type="text" placeholder="Type your message here...">
+                </div>
+                <div class="inputIcon">
+                    <i class="fal fa-grin-alt"></i>
+                    <i class="fal fa-camera"></i>
+                </div>
+            </div>
+            <div class="mic">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+{% endblock %}

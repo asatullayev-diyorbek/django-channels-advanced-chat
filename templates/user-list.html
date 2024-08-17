@@ -1,0 +1,87 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block content %}
+	<main>
+        <div class="searchBx">
+            <i class="fal fa-search"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="box person">
+            <div class="title">
+                <h2>person</h2>
+            </div>
+            {% for user in users %}
+            	<a href="{% url 'chatadvanced:chat' user.username %}">
+                    <img src="{% static 'user.' %}" alt="antMan">
+                    <div class="nameBx">
+                        <div class="name">
+                            <h2>Ant Man</h2>
+                            <h4>today,<span>09:45 pm</span></h4>
+                        </div>
+                        <div class="mess">
+                            <h3>Good luck! Captain.</h3>
+                            <i class="fal fa-check-double" id="clr"></i>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+
+            <a href="{% url 'chatadvanced:chat' "pistonchi" %}">
+                <img src="{% static 'images/blackPanther.jpg' %}" alt="antMan">
+                <div class="nameBx">
+                    <div class="name">
+                        <h2>Black Panther</h2>
+                        <h4>today,<span>12:10 pm</span></h4>
+                    </div>
+                    <div class="mess">
+                        <h3>mission complete.</h3>
+                        <i class="fal fa-check-double"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'chatadvanced:chat' "asadbek" %}">
+                <img src="{% static 'images/captainAmerica.jpg' %}" alt="antMan">
+                <div class="nameBx">
+                    <div class="name">
+                        <h2>Captain America</h2>
+                        <h4>today,<span>12:10 pm</span></h4>
+                    </div>
+                    <div class="mess">
+                        <h3>mission complete.</h3>
+                        <span>2</span>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'chatadvanced:chat' "diyorbek" %}">
+                <img src="{% static 'images/doctorStrange.jpg' %}" alt="antMan">
+                <div class="nameBx">
+                    <div class="name">
+                        <h2>Doctor Strange</h2>
+                        <h4>today,<span>12:10 pm</span></h4>
+                    </div>
+                    <div class="mess">
+                        <h3>mission complete.</h3>
+                        <i class="fal fa-check-double"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+    <div class="right">
+        {% block chat %}
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; width: 100%">
+                <h1 style="opacity: .5; ">
+                    Chat tanlanmagan!
+                </h1>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}
